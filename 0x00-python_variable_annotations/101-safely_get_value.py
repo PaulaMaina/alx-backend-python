@@ -8,7 +8,7 @@ result = Union[Any, T]
 Def = Union[T, None]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> result:
     """Returns the value using a key"""
     if key in dct:
         return dct[key]
