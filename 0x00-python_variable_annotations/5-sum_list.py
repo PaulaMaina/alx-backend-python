@@ -2,7 +2,10 @@
 """This function takes a list of numbers and returns their sum as a float"""
 
 
-def sum_list(input_list: list[float]) -> float:
+import typing
+
+
+def sum_list(input_list: typing.List[float]) -> float:
     """Takes a list of floats and returns their sum"""
     total = 0.0
 
