@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""This function takes a list of numbers and returns their sum as a float"""
 
 
 def sum_list(input_list: list[float]) -> float:

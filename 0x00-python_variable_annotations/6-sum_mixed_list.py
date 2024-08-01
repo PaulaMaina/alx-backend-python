@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""This function returns the sum of a list elements as a float"""
 
 
 import typing

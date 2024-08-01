@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Returns the floor of an integer n"""
 
 
 import math

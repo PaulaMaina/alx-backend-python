@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""This function returns a tuple"""
 
 
 import typing
