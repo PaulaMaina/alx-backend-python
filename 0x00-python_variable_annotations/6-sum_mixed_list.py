@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+
 import typing
 
 
@@ -8,5 +10,5 @@ def sum_mixed_list(mxd_list: typing.List[typing.Union[int, float]]) -> float:
 
     for num in mxd_list:
         total += float(num)
-    
+
     return total
