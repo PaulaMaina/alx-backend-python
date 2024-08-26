@@ -75,4 +75,5 @@ class TestMemoize(unittest.TestCase):
             ) as mem_func:
                 test_class = TestClass()
                 self.assertEqual(test_class.a_property(), 42)
+                self.assertEqual(test_class.a_property(), 42)
                 mem_func.assert_called_once()
