@@ -39,7 +39,6 @@ class TestGithubOrgClient(unittest.TestCase):
                 "https://api.github.com/users/google/repos",
             )
 
-
     @patch("client.get_json")
     def test_public_repos(self, get_json_mock: MagicMock) -> None:
         """public_repos tests"""
