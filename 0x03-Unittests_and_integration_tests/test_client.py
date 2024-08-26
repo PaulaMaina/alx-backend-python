@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Module for testing the client module"""
+import unittest
 from client import GithubOrgClient
 from fixtures import TEST_PAYLOAD
 from parameterized import parameterized, parameterized_class
 from requests import HTTPError
 from typing import Dict
 from unittest.mock import MagicMock, Mock, patch, PropertyMock
-import unittest
 
 
 class TestGithubOrgClient(unittest.TestCase):
