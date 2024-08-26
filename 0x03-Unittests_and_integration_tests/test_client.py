@@ -41,7 +41,7 @@ class TestGithubOrgClient(unittest.TestCase):
 
 
     @patch("client.get_json")
-    def test_public_repos(self, get_json_mock: MAgicMock) -> None:
+    def test_public_repos(self, get_json_mock: MagicMock) -> None:
         """public_repos tests"""
         test_payload = {
             'repos_url': "https://api.github.com/users/google/repos",
@@ -84,7 +84,7 @@ class TestGithubOrgClient(unittest.TestCase):
         with patch(
             "client.GithubOrgClient._public_repos_url",
             new_callable=PropertyMock,
-        ) as pulic_repos_mock:
+        ) as public_repos_mock:
             public_repos_mock.return_value = test_payload["repos_url"]
             self.assertEqual(
                  GithubOrgClient("google").public_repos(),
@@ -112,7 +112,7 @@ class TestGithubOrgClient(unittest.TestCase):
         'apache2_repos': TEST_PAYLOAD[0][3],
     },
 ])
-class TestIntegrationGithbuOrgClient(unittest.TestCase):
+class TestIntegrationGithubOrgClient(unittest.TestCase):
     """Integrations tests for GithubOrgClient"""
     @classmethod
     def setUpClass(cls) -> None:
@@ -133,12 +133,12 @@ class TestIntegrationGithbuOrgClient(unittest.TestCase):
     def test_public_repos(self) -> None:
         """public_repos tests"""
         self.assertEqual(
-            GithubOrgClient("google").public_repos()
+            GithubOrgClient("google").public_repos(),
             self.expected_repos,
         )
 
     def test_public_repos_with_license(self) -> None:
-        """Test public_repos iwth a license"""
+        """Test public_repos with a license"""
         self.assertEqual(
             GithubOrgClient("google").public_repos(license="apache-2.0"),
             self.apache2_repos,
